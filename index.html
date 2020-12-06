@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Josefin+Sans" />
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="container">
+        <!--title-->
+        <div class="todo-title">
+            <div>
+                <h1>Todo</h1>
+            </div>
+            <div class="icon">
+                <i class="fa fa-sun-o"></i>
+            </div>
+        </div>
+
+        <!--adding items to list box-->
+        <form class="js-form">
+            <input autofocus type="text" aria-label="Enter a new todo item" placeholder="E.g. Build a web app" class="js-todo-input" />
+        </form>
+        <!--list items-->
+        <ul class="todo-list js-todo-list"></ul>
+
+        <!-- Add dynamic number -->
+        <div class="dynamic-items">
+            <div class="items-left">
+                <p>Items left</p>
+            </div>
+            <div class="completed">
+                <p>Clear completed</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div>
+                <p>All</p>
+            </div>
+            <div>
+                <p>Active</p>
+            </div>
+            <div>
+                <p>Completed</p>
+            </div>
+        </div>
+        <div class="bottom-text">
+            <p>Drag and drop to reorder list</p>
+        </div>
+    </div>
+    <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
+      >. Coded by <a href="#">Nevis Adhiambo</a>.
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
+<!--fa fa-moon-0 fas fa-sun-->

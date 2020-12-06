@@ -1,0 +1,212 @@
+:root {
+    --color-primary-red: hsl(0, 100%, 74%);
+    --color-brightblue: hsl(220, 98%, 61%);
+    --color-check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    /*light theme*/
+    --color-light-gray: hsl(0, 0%, 98%);
+    --color-very-light-grayish-blue: hsl(236, 33%, 92%);
+    --color-light-greyish-blue: hsl(233, 11%, 84%);
+    --color-dark-grayish-blue: hsl(236, 9%, 61%);
+    --color-very-dark-grayish-blue: hsl(235, 19%, 35%);
+    /*dark theme*/
+    --color-very-darkblue: hsl(235, 21%, 11%);
+    --color-very-dark-desaturatedblue: hsl(235, 24%, 19%);
+    --color-light-greyishblue: hsl(234, 39%, 85%);
+    --color-dark-greyishblue: hsl(234, 39%, 85%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* light theme*/
+
+.body-light {
+    background-color: var(--color-light-gray);
+    background-image: url("images/bg-desktop-light.jpg");
+}
+
+.js-todo-input-light {
+    background-color: var(--color-very-light-grayish-blue);
+}
+
+.dynamic-light,
+.item-light {
+    background-color: var(--color-very-light-grayish-blue);
+}
+
+.bottom-light {
+    background-color: var(--color-very-light-grayish-blue);
+}
+
+.todo-list-light {
+    color: #000;
+    background-color: var(--color-very-light-grayish-blue);
+}
+
+
+/*dark theme*/
+
+body {
+    font-size: 18px;
+    font-family: "Josefin sans";
+    align-items: center;
+    background-color: var(--color-very-darkblue);
+    background-image: url("images/bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    padding: 1rem;
+    margin: 3rem auto;
+    width: 50%;
+}
+
+.todo-title {
+    color: var(--color-very-light-grayish-blue);
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: .9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.js-todo-input {
+    background-color: var(--color-very-dark-desaturatedblue);
+    border-radius: .2rem;
+    border: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.dynamic-items,
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: .2rem;
+    background-color: var(--color-very-dark-desaturatedblue);
+}
+
+.bottom-text {
+    color: hsl(233, 14%, 35%);
+    text-align: center;
+    cursor: pointer;
+}
+
+.bottom-text:hover {
+    color: var(--color-brightblue);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: .2rem;
+    background-color: var(--color-very-dark-desaturatedblue);
+}
+
+.bottom>div {
+    cursor: pointer;
+}
+
+.bottom>div:hover {
+    color: var(--color-brightblue);
+}
+
+
+/*js css*/
+
+.todo-list {
+    list-style: none;
+    border-radius: .2rem;
+    background-color: var(--color-very-dark-desaturatedblue);
+}
+
+.todo-item {
+    padding: .3rem;
+    border-bottom: .1rem solid hsl(234, 11%, 52%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.todo-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.done span {
+    text-decoration: line-through;
+    text-decoration-color: var(--color-very-light-grayish-blue);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.tick {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: var(--color-check-background);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tick::before {
+    content: '✓';
+    font-size: 15px;
+    display: none;
+}
+
+.done .tick::before {
+    display: inline;
+}
+
+.delete-todo {
+    border: .1rem solid #fff;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.delete-todo i {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*media query*/
+
+@media(max-width:676px) {
+    body {
+        background-image: url("images/bg-mobile-dark.jpg");
+    }
+    .body-light {
+        background-image: url("images/bg-mobile-light.jpg");
+    }
+    .container {
+        width: 100%;
+    }
+}
